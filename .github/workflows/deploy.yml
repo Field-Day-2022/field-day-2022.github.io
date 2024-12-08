@@ -17,7 +17,7 @@ jobs:
       # Step 2: Install Antora
       - name: Install Antora
         run: |
-          npm install -g @antora/cli @antora/site-generator-default
+          npm install -g @antora/cli @antora/site-generator
 
       # Step 3: Build the Site
       - name: Build Antora Documentation

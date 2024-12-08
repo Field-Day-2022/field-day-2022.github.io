@@ -7,5 +7,4 @@ content:
     branches: HEAD
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
-    snapshot: true
+    url: https://github.com/Field-Day-2022/field-day-antora-ui/releases/latest/download/ui-bundle.zip

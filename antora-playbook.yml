@@ -1,0 +1,12 @@
+site:
+  title: Field Day Documentation
+  start_page: field-day-docs::index
+content:
+  sources:
+    - url: .
+      start_path: modules
+ui:
+  bundle:
+    url: ./ui/default-theme
+runtime:
+  cache_dir: ./cache

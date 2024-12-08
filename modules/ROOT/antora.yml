@@ -1,0 +1,5 @@
+name: field-day-docs
+version: latest
+title: Field Day Documentation
+nav:
+  - nav.adoc

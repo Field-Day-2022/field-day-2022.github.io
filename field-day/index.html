@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../_/css/site.css">
   </head>
   <body class="article">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
@@ -20,33 +21,39 @@
     </div>
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
-        <a class="navbar-item" href="#">Home</a>
+        <a class="navbar-item" href="https://field-day-2022.github.io/">Home</a>
+        <a class="navbar-item" href="/about">
+          <span>About</span>
+        </a>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Products</a>
+          <a class="navbar-link" href="https://github.com/Field-Day-2022">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>GitHub</span>
+          </a>
           <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Product A</a>
-            <a class="navbar-item" href="#">Product B</a>
-            <a class="navbar-item" href="#">Product C</a>
+            <a class="navbar-item" target="_blank" href="https://github.com/Field-Day-2022">Organization</a>
+            <a class="navbar-item" target="_blank" href="https://github.com/Field-Day-2022/desktop-data-manager">Desktop
+              Data Manager</a>
+            <a class="navbar-item" target="_blank"
+              href="https://github.com/Field-Day-2022/mobile-collection-tool">Mobile Collection Tool</a>
+            <a class="navbar-item" target="_blank"
+              href="https://github.com/Field-Day-2022/field-day-2022.github.io">Documentation</a>
+            <a class="navbar-item" target="_blank"
+              href="https://github.com/Field-Day-2022/field-day-antora-ui">Documentation UI</a>
           </div>
         </div>
-        <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Services</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="#">Service A</a>
-            <a class="navbar-item" href="#">Service B</a>
-            <a class="navbar-item" href="#">Service C</a>
-          </div>
-        </div>
-        <div class="navbar-item">
-          <span class="control">
-            <a class="button is-primary" href="#">Download</a>
-          </span>
-        </div>
+        <a class="navbar-item" href="/faq">
+          <span>FAQ</span>
+        </a>
+        <a class="navbar-item" href="/contact">
+          <span>Contact</span>
+        </a>
       </div>
     </div>
   </nav>
-</header>
-<div class="body">
+</header><div class="body">
 <div class="nav-container" data-component="field-day" data-version="">
   <aside class="nav">
     <div class="panels">
@@ -145,8 +152,15 @@
 </main>
 </div>
 <footer class="footer">
-  <p>This page was built using the Antora default UI.</p>
-  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+  <p>© Field Day 2024. All rights reserved.</p>
+  <p>
+    This site is powered by <a href="https://antora.org" target="_blank">Antora</a> and customized using the Field Day UI. 
+    View the <a href="https://github.com/Field-Day-2022/field-day-antora-ui" target="_blank">UI source code</a>.
+  </p>
+  <p>
+    Have feedback or suggestions? Contribute on our 
+    <a href="https://github.com/Field-Day-2022/field-day-2022.github.io" target="_blank">documentation repository</a>.
+  </p>
 </footer>
 <script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
 <script async src="../_/js/vendor/highlight.js"></script>

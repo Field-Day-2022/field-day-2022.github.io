@@ -1,0 +1,9 @@
+:stylesheet: style.css
+:linkcss:
+
+= Field Day Documentation
+
+Welcome to the Field Day organization! Our mission is to provide innovative tools for wildlife researchers to collect and manage data efficiently. This documentation site will include user guides and contribution guides for the following repositories:
+
+- **link:https://github.com/Field-Day-2022/mobile-data-collector[Field Day Mobile Data Collector (MDC)]**: A React-based mobile application for offline field data collection.
+- **link:https://github.com/Field-Day-2022/desktop-data-manager[Field Day Desktop Data Manager (DDM)]**: A desktop-friendly application for managing and exporting collected data.

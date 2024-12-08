@@ -1,22 +1,3 @@
-= Field Day Documentation
-:page-layout: default
-:toc: left
-:toc-title: Navigation
+= Field Day
 
-image::logo.svg[Field Day Logo, width=150, align="center"]
-
-Welcome to the **Field Day organization** documentation site! This site provides comprehensive guides for users and contributors.
-
-== Getting Started
-Learn how to set up and start using our tools.
-
-== User Guides
-Explore detailed guides for using:
-- link:mobile-data-collector[Mobile Data Collector (MDC)]
-- link:desktop-data-manager[Desktop Data Manager (DDM)]
-
-== Contribution Guidelines
-How to contribute to Field Day projects.
-
-== Contact Us
-For any questions, email us at info@fieldday.com.
+You are home.

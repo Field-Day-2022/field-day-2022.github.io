@@ -1,12 +1,11 @@
 site:
-  title: Field Day Documentation
-  start_page: field-day-docs::index
+  title: Docs Site
+  start_page: field-day::index.adoc
 content:
   sources:
-    - url: .
-      start_path: modules
+  - url: .
+    branches: HEAD
 ui:
   bundle:
-    url: ./ui/default-theme
-runtime:
-  cache_dir: ./cache
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true

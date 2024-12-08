@@ -1,3 +1,19 @@
 = Field Day
 
-You are home.
+Field Day is a suite of software tools that support wildlife researchers in collecting and managing data efficiently. Field Day is maintained by undergraduate software engineering students at Arizona State University. It consists of three primary components:
+
+* Mobile Data Collector: A progressive web application that allows researchers to collect data in the field using a mobile device.
+* Desktop Data Manager: A desktop application that allows researchers to manage data collected in the field.
+* Firestore Database: A cloud-based database that stores data collected in the field.
+
+== Mobile Data Collector
+
+The Mobile Data Collector is a progressive web application that allows researchers to collect data in the field using a mobile device. The Mobile Data Collector is designed to be used in areas with limited or no internet connectivity. Data collected in the field is stored locally on the mobile device and can be synced with the Firestore Database when an internet connection is available.
+
+== Desktop Data Manager
+
+The Desktop Data Manager is a desktop application that allows researchers to manage data collected in the field. The Desktop Data Manager provides tools for adding, editing, deleting, and exporting data collected in the field.
+
+== Firestore Database
+
+The Firestore Database is a cloud-based database that stores data collected in the field. The Firestore Database is designed to be scalable and secure, allowing researchers to store and access large amounts of data with confidence.

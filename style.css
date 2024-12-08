@@ -1,59 +1,79 @@
-/* Base Colors */
+/* Reset */
 body {
+	margin: 0;
+	padding: 0;
 	font-family: Arial, sans-serif;
-	color: #191919; /* ASU Gray for text */
-	background-color: #FAFAFA; /* ASU Light Gray for background */
+	color: #191919;
+	background-color: #FAFAFA;
   }
   
-  h1, h2, h3, h4 {
-	color: #8C1D40; /* ASU Maroon for headings */
+  /* Header */
+  h1 {
+	text-align: center;
+	color: #8C1D40; /* ASU Maroon */
+  }
+  
+  img {
+	display: block;
+	margin: 20px auto;
+  }
+  
+  /* Sidebar */
+  #toc {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 250px;
+	height: 100%;
+	background-color: #F9F9F9;
+	border-right: 1px solid #D0D0D0;
+	padding: 20px;
+	overflow-y: auto;
+  }
+  
+  #toc-title {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	color: #8C1D40;
 	font-weight: bold;
   }
   
-  a {
-	color: #FFC627; /* ASU Gold for links */
+  #toc ul {
+	list-style-type: none;
+	padding: 0;
+  }
+  
+  #toc ul li a {
 	text-decoration: none;
+	color: #191919;
+	padding: 5px;
+	display: block;
   }
   
-  a:hover {
-	color: #8C1D40; /* Hover effect with ASU Maroon */
-	text-decoration: underline;
+  #toc ul li a:hover {
+	background-color: #FFC627; /* ASU Gold */
+	color: #8C1D40; /* ASU Maroon */
   }
   
-  blockquote {
-	border-left: 4px solid #8C1D40; /* ASU Maroon for quote border */
-	color: #484848; /* ASU Dark Gray */
+  /* Main Content */
+  #content {
+	margin-left: 270px;
+	padding: 20px;
+  }
+  
+  h2 {
+	color: #8C1D40; /* ASU Maroon */
+	margin-top: 20px;
+  }
+  
+  /* Footer */
+  footer {
+	text-align: center;
+	background-color: #8C1D40;
+	color: white;
 	padding: 10px;
-	background-color: #F9F9F9;
-  }
-  
-  table {
-	border-collapse: collapse;
+	position: fixed;
+	bottom: 0;
 	width: 100%;
-	margin-bottom: 1em;
-  }
-  
-  table th {
-	background-color: #8C1D40; /* ASU Maroon for table headers */
-	color: #FFFFFF; /* White text for contrast */
-	padding: 10px;
-  }
-  
-  table td {
-	border: 1px solid #D0D0D0; /* Light gray for table borders */
-	padding: 10px;
-  }
-  
-  button {
-	background-color: #FFC627; /* ASU Gold for buttons */
-	color: #191919; /* ASU Dark Gray for text */
-	border: none;
-	padding: 10px 20px;
-	cursor: pointer;
-  }
-  
-  button:hover {
-	background-color: #8C1D40; /* ASU Maroon on hover */
-	color: #FFFFFF; /* White text */
   }
   

@@ -1,4 +1,4 @@
-name: Deploy Antora Documentation
+name: Deploy Documentation
 
 on:
   push:
@@ -6,25 +6,26 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      # Step 1: Checkout Repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-
+      # Step 2: Install Antora
       - name: Install Antora
-        run: npm install -g @antora/cli @antora/site-generator-default
+        run: |
+          npm install -g @antora/cli @antora/site-generator-default
 
-      - name: Build Antora site
+      # Step 3: Build the Site
+      - name: Build Antora Documentation
         run: antora antora-playbook.yml
 
+      # Step 4: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build/
+          publish_dir: ./build

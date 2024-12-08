@@ -14,9 +14,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Install Antora
-      - name: Install Antora
+      # Step 2: Configure npm registry and Install Antora
+      - name: Configure npm registry and Install Antora
         run: |
+          npm config set registry http://registry.npmjs.org
           npm install -g @antora/cli @antora/site-generator
 
       # Step 3: Build the Site
@@ -28,4 +29,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./build/site

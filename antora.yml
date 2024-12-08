@@ -1,0 +1,5 @@
+name: field-day
+version: ~
+title: Field Day
+nav:
+- modules/ROOT/nav.adoc

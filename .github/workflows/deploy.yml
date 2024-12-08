@@ -1,4 +1,4 @@
-name: Deploy GitHub Pages
+name: Deploy Antora Documentation
 
 on:
   push:
@@ -6,22 +6,22 @@ on:
       - main
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up AsciiDoc toolchain
-        run: |
-          sudo apt-get update
-          sudo apt-get install asciidoctor -y
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
-      - name: Build AsciiDoc site
-        run: |
-          mkdir -p build
-          asciidoctor -D build/ index.adoc
+      - name: Install Antora
+        run: npm install -g @antora/cli @antora/site-generator-default
+
+      - name: Build Antora site
+        run: antora antora-playbook.yml
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

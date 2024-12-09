@@ -1,1 +1,2 @@
-* xref:new-page.adoc[]
+* xref:desktop-data-manager.adoc[Desktop Data Manager]
+* xref:mobile-data-collector.adoc[Mobile Data Collector]

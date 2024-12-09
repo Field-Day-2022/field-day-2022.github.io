@@ -1,0 +1,12 @@
+= Contact Us
+
+Have questions or need assistance? We’re here to help!
+
+== GitHub
+Check out our link:https://github.com/field-day-2022[GitHub organization^] for the latest updates and resources.
+
+== Social Media
+Connect with project sponsors and contributors on LinkedIn:
+
+- link:https://www.linkedin.com/in/heather-bateman-68341013/[Dr. Heather Bateman^] - Project Sponsor and Professor of Biology at Arizona State University.
+- link:https://www.linkedin.com/in/ianskelskey/[Ian Skelsey^] - Member of the 2022 Capstone Team and continuing contributor.

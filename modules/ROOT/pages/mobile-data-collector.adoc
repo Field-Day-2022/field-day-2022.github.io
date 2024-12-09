@@ -1,3 +1,3 @@
-= New Page
+= Mobile Data Collector
 
 You've found a new page.

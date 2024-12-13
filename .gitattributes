@@ -1,0 +1,4 @@
+*.adoc linguist-detectable=true
+*.adoc linguist-language=AsciiDoc
+*.yml linguist-detectable=true
+*.yml linguist-language=YAML

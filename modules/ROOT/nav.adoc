@@ -1,2 +1,3 @@
 * xref:desktop-data-manager.adoc[Desktop Data Manager]
 * xref:mobile-data-collector.adoc[Mobile Data Collector]
+* xref:publications.adoc[Publications]

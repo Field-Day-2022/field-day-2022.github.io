@@ -1,0 +1,22 @@
+name: "General Issue"
+description: "Report a general issue or suggestion."
+title: "[General Issue]:"
+labels: ["general"]
+body:
+- type: textarea
+  id: description
+  attributes:
+    label: "Describe your issue or suggestion"
+    description: "Provide a detailed description of the issue or suggestion."
+    placeholder: "E.g., Suggest adding a contributors guide."
+- type: input
+  id: category
+  attributes:
+    label: "Category"
+    description: "Select a category for this issue."
+    placeholder: "E.g., Bug, Enhancement."
+- type: textarea
+  id: additional-info
+  attributes:
+    label: "Additional Information"
+    description: "Provide any additional information or context."

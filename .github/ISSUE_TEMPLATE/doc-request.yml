@@ -1,0 +1,26 @@
+name: "New Documentation Request"
+description: "Request new documentation to be created."
+title: "[New Docs Request]:"
+labels: ["documentation", "request"]
+body:
+- type: markdown
+  attributes:
+    value: "Use this template to request new documentation to be created."
+- type: input
+  id: topic
+  attributes:
+    label: "Documentation Topic"
+    description: "What is the topic of the documentation you are requesting?"
+    placeholder: "E.g., 'How to deploy the application'."
+- type: textarea
+  id: details
+  attributes:
+    label: "Details"
+    description: "Describe the details of the documentation you are requesting."
+    placeholder: "Provide a brief summary and any necessary details."
+- type: input
+  id: urgency
+  attributes:
+    label: "Urgency Level"
+    description: "How urgent is this documentation?"
+    placeholder: "E.g., High, Medium, Low."

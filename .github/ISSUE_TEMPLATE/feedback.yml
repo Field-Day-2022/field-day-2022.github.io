@@ -1,0 +1,19 @@
+name: "Documentation Feedback"
+description: "Provide feedback or report issues with the existing documentation."
+title: "[Docs Feedback]:"
+labels: ["documentation", "feedback"]
+body:
+- type: markdown
+  attributes:
+    value: "Use this template to provide feedback on existing documentation or report inconsistencies."
+- type: textarea
+  id: section
+  attributes:
+    label: "Which section or page does this refer to?"
+    description: "Provide the name of the documentation page or section."
+- type: textarea
+  id: feedback
+  attributes:
+    label: "Describe the issue or feedback"
+    description: "Provide details about the issue or suggestions for improvement."
+    placeholder: "E.g., Incorrect steps on the 'Getting Started' page."

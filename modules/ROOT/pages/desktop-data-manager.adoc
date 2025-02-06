@@ -24,8 +24,7 @@ Sign in to this portal with your ASU-affiliated Google account.
 
 Once authenticated, you'll see the main dashboard. Each tab represents a different category of critter data collected in the field.
 
-.Main Dashboard
-image::mainpage.png[Main dashboard of the Field Day app]
+image::ddm/mainpage.png[Main dashboard of the Field Day app]
 
 .Data Tabs
 [cols="1,1", options="header"]
@@ -59,7 +58,7 @@ image::mainpage.png[Main dashboard of the Field Day app]
 One of the most important things to take note here is the Data Source Selector:
 
 .Data Source Selector
-image::datasource.png[Data Source selector]
+image::ddm/datasource.png[Data Source selector]
 
 This tab switches between which set of data to use. There are two selections: Live and Test
 
@@ -71,12 +70,12 @@ This tab switches between which set of data to use. There are two selections: Li
 All entries are available to be viewed on the desktop application. To edit/delete/alter in any way these entries, you can click the edit or delete button on the side of each entry under the "Actions" column.
 
 .Edit and Delete Buttons
-image::editcolumns_beforebutton.png[Edit and delete buttons next to an entry]
+image::ddm/editcolumns_beforebutton.png[Edit and delete buttons next to an entry]
 
 For example, this Lizard entry has the edit button and delete button next to it. Clicking the edit button makes these fields editable:
 
 .Editing Fields
-image::editcolumns_active.png[Editable fields after clicking the edit button]
+image::ddm/editcolumns_active.png[Editable fields after clicking the edit button]
 
 Now you can edit whatever information you need. To save or discard these changes, hit the check or X button, respectively.
 
@@ -85,17 +84,17 @@ Now you can edit whatever information you need. To save or discard these changes
 If a certain page is too crowded, or has information you don't need to take into consideration at a certain point in time, fields are able to be removed from the table using the editor in the top right corner:
 
 .Project Dropdown
-image::projectdropdown.png[Project dropdown]
+image::ddm/projectdropdown.png[Project dropdown]
 
 Clicking the three-card button, it shows this menu: (not all shown for image size purposes):
 
 .Column Selector Menu
-image::columnselector.png[Column selector menu]
+image::ddm/columnselector.png[Column selector menu]
 
 As an example, if you only wanted to view Year, Date & Time, and Site, you can deselect all options. This is what the page would look like after:
 
 .Selected Columns
-image::selectedColumns.png[Table view with selected columns]
+image::ddm/selectedColumns.png[Table view with selected columns]
 
 === Searching For Entries
 
@@ -106,7 +105,7 @@ For example: In the lizard tab, say you wanted to find lizards of species code A
 First, type ASTI into the search box. For any other term you want to search, add a +. i.e.:
 
 .Entering Search Terms
-image::searchtwoterms.png[Search bar with multiple terms]
+image::ddm/searchtwoterms.png[Search bar with multiple terms]
 
 == Detailed Instructions For Data Handling
 
@@ -115,7 +114,7 @@ image::searchtwoterms.png[Search bar with multiple terms]
 At the bottom of any page in the Field Day app, you can find 4 buttons:
 
 .Table Tools
-image::bottom4buttons.png[Four buttons at the bottom of the page]
+image::ddm/bottom4buttons.png[Four buttons at the bottom of the page]
 
 The button that looks like an arrow coming out of a rectangle, or, this one: image::exportToCSV.png[Export button] is the Export button.
 
@@ -124,7 +123,7 @@ Click this button to bring up a dialogue to select which data to convert to a CS
 Any of the data on the Field Day app can be generated into this file, as shown in the menu:
 
 .Export to CSV Menu
-image::exportToCSVModal.png[Export to CSV dialog]
+image::ddm/exportToCSVModal.png[Export to CSV dialog]
 
 You may also choose to only export from the current session or the data already saved to the database.
 
@@ -170,7 +169,7 @@ Sometimes Session data can be messy. If entries are ever entered into the wrong 
 At the bottom of the page, located amongst the same 4 buttons as the CSV export, is the Merge Sessions button:
 
 .Merge Sessions Button
-image::mergesession_button.png[Merge Sessions button]
+image::ddm/mergesession_button.png[Merge Sessions button]
 
 Clicking this button brings a screen up that allows you to merge two sessions together. Merging a session goes as follows:
 
@@ -184,12 +183,12 @@ To merge a session:
 Select the two session you want to merge together using the tool:
 
 .Merge Sessions Dialog
-image::mergesession_modal.png[Merge Sessions dialog]
+image::ddm/mergesession_modal.png[Merge Sessions dialog]
 
 After that, hit merge!
 
 .Selected Sessions Ready to Merge
-image::mergesession_Selected.png[Selected sessions ready to merge]
+image::ddm/mergesession_Selected.png[Selected sessions ready to merge]
 
 The sessions will be merged as described above. Make sure you're sure about what you're merging - there's no undoing this operation!
 

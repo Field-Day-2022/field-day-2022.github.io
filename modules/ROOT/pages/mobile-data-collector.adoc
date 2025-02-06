@@ -43,9 +43,8 @@ When selecting *Search* from the menu, you can:
   * Example: `ASTI+A1B2` will find entries containing both "ASTI" and "A1B2".
 . Click the *Search* button to find matching records.
 
-[NOTE]
+[TIP]
 ====
-*Tip:*
 The search will return any records that contain all the terms you entered, regardless of their order or location in the record.
 ====
 
@@ -68,9 +67,8 @@ image::mobile/newSession.png[New Data Entry Screen]
 .New Data Entry Screen
 image::mobile/dataentry.png[New Data Entry Screen]
 
-[NOTE]
+[TIP]
 ====
-*Tip:*
 To add new entries, select the form, select taxa, and add counts.
 Once complete, choose *End Session*.
 ====
@@ -78,9 +76,8 @@ Once complete, choose *End Session*.
 .Data Verification Screen
 image::mobile/verify.png[Data Verification Screen]
 
-[NOTE]
+[TIP]
 ====
-*Tip:*
 Errors on the verification screen should be resolved by using the back button to make corrections.
 ====
 
@@ -89,9 +86,8 @@ Errors on the verification screen should be resolved by using the back button to
 .Mammal Entry Form
 image::mobile/mammal.png[Mammal Entry Form]
 
-[NOTE]
+[TIP]
 ====
-*Tip:*
 * Comments and "Is it dead?" are optional.
 * All other entries are required.
 * Sex can be male, female, or unknown.
@@ -109,9 +105,8 @@ image::mobile/mammal.png[Mammal Entry Form]
 * "Is it dead?" status
 * Comments (optional)
 
-[NOTE]
+[IMPORTANT]
 ====
-*Important:*
 Always verify your entries in the confirmation screen before submitting data.
 **Once submitted, modifications must be made through the History page.**
 ====
@@ -126,11 +121,10 @@ Always verify your entries in the confirmation screen before submitting data.
 .History Screen
 image::mobile/complete.png[History Screen]
 
-[NOTE]
+[IMPORTANT]
 ====
-*Important:*
 Always verify your entries in the confirmation screen before submitting data.
-Once submitted, modifications must be made through the History page.
+**Once submitted, modifications must be made through the History page.**
 ====
 
 == Best Practices
@@ -142,6 +136,5 @@ Once submitted, modifications must be made through the History page.
 
 [NOTE]
 ====
-*Remember:*
 Once a session is ended and confirmed, you'll need to access the History page to make any additional entries or modifications.
 ====

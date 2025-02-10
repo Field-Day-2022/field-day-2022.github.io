@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Mobile Data Collector :: Field Day Docs</title>
+    <title>Field Day Wildlife Data Collection App :: Field Day Docs</title>
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../_/css/site.css">
 <link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
@@ -113,9 +113,391 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Mobile Data Collector</h1>
+<h1 class="page">Field Day Wildlife Data Collection App</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_introduction">Introduction</a></li>
+<li><a href="#_getting_started">Getting Started</a>
+<ul class="sectlevel2">
+<li><a href="#_initial_setup_and_login">Initial Setup and Login</a></li>
+</ul>
+</li>
+<li><a href="#_using_the_search_function">Using the Search Function</a></li>
+<li><a href="#_data_collection_process">Data Collection Process</a>
+<ul class="sectlevel2">
+<li><a href="#_recording_new_data">Recording New Data</a></li>
+<li><a href="#_species_entry_form">Species Entry Form</a></li>
+</ul>
+</li>
+<li><a href="#_data_entry_guidelines">Data Entry Guidelines</a>
+<ul class="sectlevel2">
+<li><a href="#_fields_for_entry">Fields for Entry:</a></li>
+</ul>
+</li>
+<li><a href="#_session_management">Session Management</a></li>
+<li><a href="#_best_practices">Best Practices</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>You&#8217;ve found a new page.</p>
+<p>The Field Day project is a Wildlife Data Collection and management tool designed to address field researchers' challenges, particularly those in biology and ecology. The project consists of:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A Progressive Web App (PWA) for mobile devices</p>
+</li>
+<li>
+<p>A web application for larger screens</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Key features include</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>Streamlined data collection</p>
+</li>
+<li>
+<p>Offline functionality with local database caching</p>
+</li>
+<li>
+<p>2-factor Google authentication</p>
+</li>
+<li>
+<p>Population data collection using capture mark-recapture techniques</p>
+</li>
+<li>
+<p>Data management, viewing, and export capabilities</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_getting_started"><a class="anchor" href="#_getting_started"></a>Getting Started</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_initial_setup_and_login"><a class="anchor" href="#_initial_setup_and_login"></a>Initial Setup and Login</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Access the PWA at <a href="https://asu-field-day-pwa.web.app/" class="bare">https://asu-field-day-pwa.web.app/</a> on your mobile device.</p>
+</li>
+<li>
+<p>Enter your handler initials (2-3 characters required).</p>
+</li>
+<li>
+<p>Select your project, site, and array from the dropdown menus.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/mobile/home.png" alt="Initial Data Collection Setup">
+</div>
+<div class="title">Figure 1. Initial Data Collection Setup</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_the_search_function"><a class="anchor" href="#_using_the_search_function"></a>Using the Search Function</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When selecting <strong>Search</strong> from the menu, you can:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Use the dropdown filters to narrow your search:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Project</p>
+</li>
+<li>
+<p>Site</p>
+</li>
+<li>
+<p>Array</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Enter search terms in the <strong>Search Database</strong> field:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use <code>+</code> between terms to search for multiple items.</p>
+</li>
+<li>
+<p>Example: <code>ASTI+A1B2</code> will find entries containing both "ASTI" and "A1B2".</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click the <strong>Search</strong> button to find matching records.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The search will return any records that contain all the terms you entered, regardless of their order or location in the record.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/mobile/search.png" alt="Search Interface Example">
+</div>
+<div class="title">Figure 2. Search Interface Example</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_data_collection_process"><a class="anchor" href="#_data_collection_process"></a>Data Collection Process</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_recording_new_data"><a class="anchor" href="#_recording_new_data"></a>Recording New Data</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Enter Recorder Initials.</p>
+</li>
+<li>
+<p>Enter Handler Initials.</p>
+</li>
+<li>
+<p>Select Project, Site, and Array.</p>
+</li>
+<li>
+<p>Selecting <strong>No</strong> will close the session.</p>
+</li>
+<li>
+<p>Selecting <strong>Yes</strong> will take you to the next screen.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/mobile/newSession.png" alt="New Data Entry Screen">
+</div>
+<div class="title">Figure 3. New Data Screen</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/mobile/dataentry.png" alt="New Data Entry Screen">
+</div>
+<div class="title">Figure 4. New Data Entry Screen</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To add new entries, select the form, select taxa, and add counts.
+Once complete, choose <strong>End Session</strong>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/mobile/verify.png" alt="Data Verification Screen">
+</div>
+<div class="title">Figure 5. Data Verification Screen</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Errors on the verification screen should be resolved by using the back button to make corrections.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_species_entry_form"><a class="anchor" href="#_species_entry_form"></a>Species Entry Form</h3>
+<div class="imageblock">
+<div class="content">
+<img src="_images/mobile/mammal.png" alt="Mammal Entry Form">
+</div>
+<div class="title">Figure 6. Mammal Entry Form</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Comments and "Is it dead?" are optional. All other fields are required.</p>
+</li>
+<li>
+<p>Sex can be male, female, or unknown.</p>
+</li>
+<li>
+<p>If you are unable to proceed, check that all required fields are filled out.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_data_entry_guidelines"><a class="anchor" href="#_data_entry_guidelines"></a>Data Entry Guidelines</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_fields_for_entry"><a class="anchor" href="#_fields_for_entry"></a>Fields for Entry:</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Species Code</p>
+</li>
+<li>
+<p>Fence Trap location</p>
+</li>
+<li>
+<p>Mass (g)</p>
+</li>
+<li>
+<p>Sex</p>
+</li>
+<li>
+<p>"Is it dead?" status (optional)</p>
+</li>
+<li>
+<p>Comments (optional)</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Always verify your entries in the confirmation screen before submitting data.
+Once submitted, modifications must be made through the History page.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_session_management"><a class="anchor" href="#_session_management"></a>Session Management</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select <strong>End Session</strong> when finished with data collection.</p>
+</li>
+<li>
+<p>Review the number of critters recorded.</p>
+</li>
+<li>
+<p>Confirm your intention to close the session.</p>
+</li>
+<li>
+<p><strong>Note:</strong> Closed sessions can be accessed later through the History page to edit or add data.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/mobile/complete.png" alt="History Screen">
+</div>
+<div class="title">Figure 7. History Screen</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_best_practices"><a class="anchor" href="#_best_practices"></a>Best Practices</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Always double-check measurements before submission.</p>
+</li>
+<li>
+<p>Use the comments field to note any unusual observations.</p>
+</li>
+<li>
+<p>Ensure all required fields are completed.</p>
+</li>
+<li>
+<p>Verify your data in the confirmation screen.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Important"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Once a session is ended and confirmed, you&#8217;ll need to access the History page to make any additional entries or modifications.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
 </div>
 </article>
   </div>

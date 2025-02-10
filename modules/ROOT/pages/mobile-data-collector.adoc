@@ -1,3 +1,133 @@
-= Mobile Data Collector
+= Field Day Wildlife Data Collection App
+:toc:
+:toclevels: 2
 
-You've found a new page.
+== Introduction
+
+The Field Day project is a Wildlife Data Collection and management tool designed to address field researchers' challenges, particularly those in biology and ecology. The project consists of:
+
+* A Progressive Web App (PWA) for mobile devices
+* A web application for larger screens
+
+[IMPORTANT]
+====
+Key features include::
+* Streamlined data collection
+* Offline functionality with local database caching
+* 2-factor Google authentication
+* Population data collection using capture mark-recapture techniques
+* Data management, viewing, and export capabilities
+====
+
+== Getting Started
+
+=== Initial Setup and Login
+
+. Access the PWA at https://asu-field-day-pwa.web.app/ on your mobile device.
+. Enter your handler initials (2-3 characters required).
+. Select your project, site, and array from the dropdown menus.
+
+.Initial Data Collection Setup
+image::mobile/home.png[Initial Data Collection Setup]
+
+== Using the Search Function
+
+When selecting *Search* from the menu, you can:
+
+. Use the dropdown filters to narrow your search:
+  * Project
+  * Site
+  * Array
+. Enter search terms in the *Search Database* field:
+  * Use `+` between terms to search for multiple items.
+  * Example: `ASTI+A1B2` will find entries containing both "ASTI" and "A1B2".
+. Click the *Search* button to find matching records.
+
+[TIP]
+====
+The search will return any records that contain all the terms you entered, regardless of their order or location in the record.
+====
+
+.Search Interface Example
+image::mobile/search.png[Search Interface Example]
+
+== Data Collection Process
+
+=== Recording New Data
+
+. Enter Recorder Initials.
+. Enter Handler Initials.
+. Select Project, Site, and Array.
+. Selecting *No* will close the session.
+. Selecting *Yes* will take you to the next screen.
+
+.New Data Screen
+image::mobile/newSession.png[New Data Entry Screen]
+
+.New Data Entry Screen
+image::mobile/dataentry.png[New Data Entry Screen]
+
+[TIP]
+====
+To add new entries, select the form, select taxa, and add counts.
+Once complete, choose *End Session*.
+====
+
+.Data Verification Screen
+image::mobile/verify.png[Data Verification Screen]
+
+[CAUTION]
+====
+Errors on the verification screen should be resolved by using the back button to make corrections.
+====
+
+=== Species Entry Form
+
+.Mammal Entry Form
+image::mobile/mammal.png[Mammal Entry Form]
+
+[TIP]
+====
+* Comments and "Is it dead?" are optional. All other fields are required.
+* Sex can be male, female, or unknown.
+* If you are unable to proceed, check that all required fields are filled out.
+====
+
+== Data Entry Guidelines
+
+=== Fields for Entry:
+
+* Species Code
+* Fence Trap location
+* Mass (g)
+* Sex
+* "Is it dead?" status (optional)
+* Comments (optional)
+
+[IMPORTANT]
+====
+Always verify your entries in the confirmation screen before submitting data.
+Once submitted, modifications must be made through the History page.
+====
+
+== Session Management
+
+. Select *End Session* when finished with data collection.
+. Review the number of critters recorded.
+. Confirm your intention to close the session.
+. **Note:** Closed sessions can be accessed later through the History page to edit or add data.
+
+.History Screen
+image::mobile/complete.png[History Screen]
+
+== Best Practices
+
+* Always double-check measurements before submission.
+* Use the comments field to note any unusual observations.
+* Ensure all required fields are completed.
+* Verify your data in the confirmation screen.
+
+[IMPORTANT]
+====
+Once a session is ended and confirmed, you'll need to access the History page to make any additional entries or modifications.
+====

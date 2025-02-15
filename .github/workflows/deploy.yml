@@ -18,7 +18,7 @@ jobs:
       - name: Configure npm registry and Install Antora
         run: |
           npm config set registry http://registry.npmjs.org
-          npm install -g @antora/cli @antora/site-generator
+          npm install -g @antora/cli @antora/site-generator @antora/lunr-extension
 
       # Step 3: Build the Site
       - name: Build Antora Documentation

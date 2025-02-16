@@ -1,0 +1,79 @@
+= Cross-disciplinary Glossary
+:toclevels: 2
+
+Field Day is a collaborative project that involves students from various disciplines, primarily software engineering and wildlife biology. To facilitate communication and understanding between team members, we have compiled a glossary of terms that are commonly used in both fields. This glossary is a work in progress and will be updated as needed.
+
+Terms marked with a 🖥️ symbol are related to software engineering, while terms marked with a 🐾 symbol are related to wildlife biology.
+
+== Glossary
+
+=== A
+
+Antora 🖥️:: 
+Antora is a documentation site generator for tech writers who create documentation sites from AsciiDoc content. It is used to build the Field Day documentation site.
+
+AsciiDoc 🖥️::
+AsciiDoc is a lightweight markup language used to write documentation. It is similar to Markdown but offers more features.
+
+=== C
+
+Capture Mark Recapture (CMR) 🐾::
+A method used in wildlife biology to estimate an animal population's size. It involves capturing animals, marking them, releasing them, and then recapturing them to see how many marked animals are found.
+
+=== G
+
+Genus 🐾::
+A rank in the biological classification system (taxonomy) that is above species and below family. It groups together species that are structurally similar or common in some way.
+
+GitHub 🖥️::
+GitHub is a platform for version control and collaboration. It allows multiple people to work on projects at the same time, track changes, and manage different versions of the project. To report issues or request features for Field Day, you will need a GitHub account.
+
+Google Firebase 🖥️::
+Google Firebase is a platform developed by Google for creating mobile and web applications. It provides a variety of tools and services to help developers build high-quality apps.
+
+Google Firestore 🖥️::
+Google Firestore is a flexible, scalable database for mobile, web, and server development from Firebase and Google Cloud Platform. It is used to store and sync data for client- and server-side development.
+
+Gulp 🖥️::
+Gulp is a toolkit for automating painful or time-consuming tasks in your development workflow. It is used in the Field Day project for tasks such as live previewing and building the site.
+
+=== I
+
+Issue 🖥️::
+An issue is a way to track enhancements, tasks, or bugs for your projects. They can be created and managed on GitHub.
+
+=== L
+
+Lunr.js 🖥️::
+Lunr.js is a small, full-text search library for use in the browser. It is used in the Field Day project to provide search functionality.
+
+=== N
+
+Node.js 🖥️::
+Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It allows you to run JavaScript on the server side.
+
+npm 🖥️::
+npm is the package manager for Node.js. It allows you to install and manage dependencies for your project.
+
+=== P
+
+Pull Request 🖥️::
+A pull request is a method of submitting contributions to a project. It is a request to merge code changes into the main project repository.
+
+=== R
+
+Repository 🖥️::
+A repository is a central location in which data is stored and managed. In GitHub, a repository is used to organize a single project.
+
+=== S
+
+Species 🐾::
+The basic unit of biological classification, a species is a group of organisms that can reproduce and have fertile offspring.
+
+=== T
+
+Taxonomy 🐾::
+The science of classification of organisms. It involves naming, describing, and classifying organisms into groups based on shared characteristics.
+
+Toe-clip Code 🐾::
+A method used in wildlife biology to uniquely mark small animals by clipping their toes in a specific pattern. This method helps in identifying individual animals during recapture.

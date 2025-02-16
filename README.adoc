@@ -16,7 +16,6 @@ node --version
 npm --version
 ----
 
-[start=2]
 2. Install Gulp globally:
 +
 [source,bash]

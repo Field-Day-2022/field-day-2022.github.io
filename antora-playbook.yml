@@ -1,5 +1,5 @@
 site:
-  title: Field Day Docs
+  title: Field Day
   start_page: field-day::index.adoc
 
 content:

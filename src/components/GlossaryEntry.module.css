@@ -1,0 +1,54 @@
+:root {
+	--background-color-light: #f9f9f9;
+	--background-color-dark: #333;
+	--border-color-light: #ddd;
+	--border-color-dark: #555;
+	--text-color-light: #000;
+	--text-color-dark: #fff;
+	--software-border-color-light: #007bff;
+	--software-border-color-dark: #66b2ff;
+	--biology-border-color-light: #28a745;
+	--biology-border-color-dark: #85e085;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+	:root {
+	  --background-color: var(--background-color-dark);
+	  --border-color: var(--border-color-dark);
+	  --text-color: var(--text-color-dark);
+	  --software-border-color: var(--software-border-color-dark);
+	  --biology-border-color: var(--biology-border-color-dark);
+	}
+  }
+  
+  @media (prefers-color-scheme: light) {
+	:root {
+	  --background-color: var(--background-color-light);
+	  --border-color: var(--border-color-light);
+	  --text-color: var(--text-color-light);
+	  --software-border-color: var(--software-border-color-light);
+	  --biology-border-color: var(--biology-border-color-light);
+	}
+  }
+  
+  .glossaryCard {
+	background-color: var(--background-color);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	padding: 1rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 1rem;
+	color: var(--text-color);
+  }
+  
+  .glossaryCard h3 {
+	margin-top: 0;
+  }
+  
+  .software {
+	border-left: 5px solid var(--software-border-color);
+  }
+  
+  .biology {
+	border-left: 5px solid var(--biology-border-color);
+  }

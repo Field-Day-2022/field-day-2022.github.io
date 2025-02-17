@@ -1,5 +1,0 @@
-* xref:desktop-data-manager.adoc[Desktop Data Manager]
-* xref:mobile-data-collector.adoc[Mobile Data Collector]
-* xref:feedback.adoc[Feedback and Issue Reporting]
-* xref:publications.adoc[Publications]
-* xref:glossary.adoc[Glossary]

@@ -11,24 +11,20 @@
 	--biology-border-color-dark: #85e085;
   }
   
-  @media (prefers-color-scheme: dark) {
-	:root {
-	  --background-color: var(--background-color-dark);
-	  --border-color: var(--border-color-dark);
-	  --text-color: var(--text-color-dark);
-	  --software-border-color: var(--software-border-color-dark);
-	  --biology-border-color: var(--biology-border-color-dark);
-	}
+  [data-theme='dark'] {
+	--background-color: var(--background-color-dark);
+	--border-color: var(--border-color-dark);
+	--text-color: var(--text-color-dark);
+	--software-border-color: var(--software-border-color-dark);
+	--biology-border-color: var(--biology-border-color-dark);
   }
   
-  @media (prefers-color-scheme: light) {
-	:root {
-	  --background-color: var(--background-color-light);
-	  --border-color: var(--border-color-light);
-	  --text-color: var(--text-color-light);
-	  --software-border-color: var(--software-border-color-light);
-	  --biology-border-color: var(--biology-border-color-light);
-	}
+  [data-theme='light'] {
+	--background-color: var(--background-color-light);
+	--border-color: var(--border-color-light);
+	--text-color: var(--text-color-light);
+	--software-border-color: var(--software-border-color-light);
+	--biology-border-color: var(--biology-border-color-light);
   }
   
   .glossaryCard {

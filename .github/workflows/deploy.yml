@@ -14,19 +14,23 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Step 2: Configure npm registry and Install Antora
-      - name: Configure npm registry and Install Antora
-        run: |
-          npm config set registry http://registry.npmjs.org
-          npm install -g @antora/cli @antora/site-generator @antora/lunr-extension
+      # Step 2: Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-      # Step 3: Build the Site
-      - name: Build Antora Documentation
-        run: antora antora-playbook.yml
+      # Step 3: Install Dependencies
+      - name: Install Dependencies
+        run: npm install
 
-      # Step 4: Deploy to GitHub Pages
+      # Step 4: Build the Site
+      - name: Build Docusaurus Site
+        run: npm run build
+
+      # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build/site
+          publish_dir: ./build

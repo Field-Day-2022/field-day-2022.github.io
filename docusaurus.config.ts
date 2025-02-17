@@ -116,7 +116,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Field Day. All rights reserved. Made with ❤️ by ASU students, faculty, and volunteers.`,
+      copyright: `© ${new Date().getFullYear()} Field Day. All rights reserved.<br/>Made with ❤️ by ASU students, faculty, and volunteers.`,
     },
     prism: {
       theme: prismThemes.github,

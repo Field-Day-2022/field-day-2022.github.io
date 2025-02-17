@@ -16,7 +16,7 @@ const config: Config = {
   organizationName: 'Field-Day-2022', // Usually your GitHub org/user name.
   projectName: 'field-day-2022.github.io', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {

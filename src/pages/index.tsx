@@ -19,12 +19,12 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <Link
-            className={clsx('button button--secondary button--lg', styles.button)}
+            className={clsx('button button--secondary', styles.button)}
             to="/about">
             📖 Learn More
           </Link>
           <Link
-            className={clsx('button button--secondary button--lg', styles.button)}
+            className={clsx('button button--secondary', styles.button)}
             to="/docs/feedback">
             💬 Contribute
           </Link>

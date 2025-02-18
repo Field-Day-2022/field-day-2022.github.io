@@ -12,6 +12,7 @@ type AppItem = {
   description: ReactNode;
   guideLink: string;
   repoLink: string;
+  appLink: string; // New property for app deployment link
 };
 
 const AppList: AppItem[] = [
@@ -25,6 +26,7 @@ const AppList: AppItem[] = [
     ),
     guideLink: '/docs/mobile-data-collector',
     repoLink: 'https://github.com/Field-Day-2022/mobile-data-collector',
+    appLink: 'https://asu-field-day-pwa.web.app/', // Example link
   },
   {
     title: '💻 Desktop Data Manager',
@@ -36,19 +38,22 @@ const AppList: AppItem[] = [
     ),
     guideLink: '/docs/desktop-data-manager',
     repoLink: 'https://github.com/Field-Day-2022/desktop-data-manager',
+    appLink: 'https://asu-field-day-webui.web.app/login', // Example link
   },
 ];
 
-function AppItem({title, Img, description, guideLink, repoLink}: AppItem) {
+function AppItem({title, Img, description, guideLink, repoLink, appLink}: AppItem) {
   return (
     <div className={clsx('col col--6', styles.appItem)}>
-      <div className="text--center">
+      <div className={clsx('text--center', styles.imageContainer)}>
         <img src={Img} className={styles.appImg} role="img" alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
+        <Heading as="h3">
+          <Link to={appLink}>{title}</Link>
+        </Heading>
         <p>{description}</p>
-        <div className={styles.links}>
+        <div className={styles.buttonContainer}>
           <Link className={clsx('button button--primary button--md', styles.button)} to={guideLink}>
             📖 User Guide
           </Link>

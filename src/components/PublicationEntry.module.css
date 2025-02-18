@@ -1,0 +1,51 @@
+:root {
+    --background-color-light: #f9f9f9;
+    --background-color-dark: #222;
+    --border-color-light: #ddd;
+    --border-color-dark: #555;
+    --text-color-light: #000;
+    --text-color-dark: #fff;
+  }
+  
+  [data-theme='dark'] {
+    --background-color: var(--background-color-dark);
+    --border-color: var(--border-color-dark);
+    --text-color: var(--text-color-dark);
+  }
+  
+  [data-theme='light'] {
+    --background-color: var(--background-color-light);
+    --border-color: var(--border-color-light);
+    --text-color: var(--text-color-light);
+  }
+  
+  .publicationCard {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+  }
+  
+  .publicationCard h3 {
+    margin-top: 0;
+  }
+  
+  .publicationCard a {
+    text-decoration: none;
+  }
+  
+  .publicationCard a:hover {
+    text-decoration: underline;
+  }
+  
+  .source, .authors, .date {
+    margin: 0.5rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .authors, .date {
+      display: none;
+    }
+  }

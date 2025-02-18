@@ -15,6 +15,22 @@
   --ifm-color-primary-lightest: #c95d84; /* Lightest Maroon */
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-color-secondary: #d0d0d0; /* ASU Gray 5 */
+  --ifm-color-secondary-dark: #bfbfbf; /* ASU Gray 4 */
+  --ifm-color-secondary-darker: #a0a0a0; /* Slightly Darker Gray */
+  --ifm-color-secondary-darkest: #8f8f8f; /* Even Darker Gray */
+  --ifm-color-secondary-light: #e8e8e8; /* ASU Gray 6 */
+  --ifm-color-secondary-lighter: #f0f0f0; /* Lighter Gray */
+  --ifm-color-secondary-lightest: #fafafa; /* Lightest Gray */
+
+  --ifm-color-warning: #ffc627; /* ASU Gold */
+  --ifm-color-warning-dark: #e6b323; /* Dark Gold */
+  --ifm-color-warning-darker: #cc9f1f; /* Darker Gold */
+  --ifm-color-warning-darkest: #b38b1b; /* Darkest Gold */
+  --ifm-color-warning-light: #ffd54f; /* Light Gold */
+  --ifm-color-warning-lighter: #ffe082; /* Lighter Gold */
+  --ifm-color-warning-lightest: #ffecb3; /* Lightest Gold */
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -27,4 +43,10 @@
   --ifm-color-primary-lighter: #c95d84; /* Lightest Maroon */
   --ifm-color-primary-lightest: #d97b9b; /* Even Lighter Maroon */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

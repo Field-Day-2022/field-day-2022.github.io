@@ -113,6 +113,10 @@ const config: Config = {
               label: 'Fulton Schools of Engineering at ASU',
               href: 'https://engineering.asu.edu/',
             },
+            {
+              label: 'Heather Bateman Applied Wildlife Ecology Lab',
+              href: 'https://hbateman.faculty.asu.edu/',
+            }
           ],
         },
       ],

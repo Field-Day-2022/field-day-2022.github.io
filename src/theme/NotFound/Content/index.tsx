@@ -4,44 +4,84 @@ import Translate from '@docusaurus/Translate';
 import type {Props} from '@theme/NotFound/Content';
 import Heading from '@theme/Heading';
 import Link from '@docusaurus/Link';
-import {useColorMode} from '@docusaurus/theme-common';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 export default function NotFoundContent({className}: Props): ReactNode {
-  const {colorMode} = useColorMode();
   const lightUrl = useBaseUrl('/img/light-desert.svg');
   const darkUrl = useBaseUrl('/img/dark-desert.svg');
   const starsUrl = useBaseUrl('/img/stars.svg');
   const cloudsUrl = useBaseUrl('/img/clouds.svg');
-  const isDark = colorMode === 'dark';
   const skyTile = 'clamp(360px, 40vw, 640px)';
   const lightGradient = 'linear-gradient(180deg, #6e73fd 0%, #ffffff 100%)';
 
-  // UPDATED: stronger, clearer "glass" for better contrast on all screens
-  const cardBg = isDark ? 'rgba(0,0,0,0.55)' : 'rgba(255,255,255,0.80)';
-  const cardBorder = isDark ? 'rgba(255,255,255,0.14)' : 'rgba(0,0,0,0.10)';
-  const cardShadow = isDark ? '0 8px 24px rgba(0,0,0,0.45)' : '0 10px 28px rgba(0,0,0,0.18)';
+  // NEW: Theme CSS injected once; ensures correct theme before hydration
+  const themeCss = `
+:root, html[data-theme='light'] {
+  --fd404-card-bg: rgba(255,255,255,0.80);
+  --fd404-card-border: rgba(0,0,0,0.10);
+  --fd404-card-shadow: 0 10px 28px rgba(0,0,0,0.18);
+
+  --fd404-primary-border: rgba(0,0,0,0.08);
+  --fd404-primary-shadow: 0 6px 18px rgba(0,0,0,0.22);
+
+  --fd404-secondary-text: rgba(0,0,0,0.85);
+  --fd404-secondary-bg: rgba(0,0,0,0.04);
+  --fd404-secondary-border: rgba(0,0,0,0.08);
+  --fd404-secondary-shadow: 0 6px 16px rgba(0,0,0,0.10);
+
+  --fd404-coach-bg: rgba(255,255,255,0.98);
+  --fd404-coach-border: rgba(0,0,0,0.12);
+  --fd404-coach-text: #111;
+}
+html[data-theme='dark'] {
+  --fd404-card-bg: rgba(0,0,0,0.55);
+  --fd404-card-border: rgba(255,255,255,0.14);
+  --fd404-card-shadow: 0 8px 24px rgba(0,0,0,0.45);
+
+  --fd404-primary-border: rgba(255,255,255,0.14);
+  --fd404-primary-shadow: 0 6px 18px rgba(0,0,0,0.45);
+
+  --fd404-secondary-text: rgba(255,255,255,0.95);
+  --fd404-secondary-bg: rgba(255,255,255,0.06);
+  --fd404-secondary-border: rgba(255,255,255,0.14);
+  --fd404-secondary-shadow: 0 6px 16px rgba(0,0,0,0.35);
+
+  --fd404-coach-bg: rgba(20,20,20,0.9);
+  --fd404-coach-border: rgba(255,255,255,0.16);
+  --fd404-coach-text: #fff;
+}
+
+/* Theme-aware visibility without JS (no initial blend) */
+.fd404-layer--light { opacity: 1; }
+.fd404-layer--dark  { opacity: 0; }
+html[data-theme='dark'] .fd404-layer--light { opacity: 0; }
+html[data-theme='dark'] .fd404-layer--dark  { opacity: 1; }
+
+/* Keep a gentle fade when user toggles theme (not on first paint) */
+.fd404-fade { transition: opacity 250ms ease; }
+`;
+
+  // UPDATED: card styles now read from CSS variables
   const cardStyle: React.CSSProperties = {
     margin: '0 auto',
     width: '100%',
-    maxWidth: 'min(92vw, 760px)', // never wider than viewport on tiny screens
+    maxWidth: 'min(92vw, 760px)',
     padding: 'clamp(20px, 4vw, 28px) clamp(20px, 5vw, 40px)',
     borderRadius: 18,
-    backgroundColor: cardBg,
+    backgroundColor: 'var(--fd404-card-bg)',
     backdropFilter: 'saturate(140%) blur(10px)',
     WebkitBackdropFilter: 'saturate(140%) blur(10px)',
-    border: `1px solid ${cardBorder}`,
-    boxShadow: cardShadow,
+    border: '1px solid var(--fd404-card-border)',
+    boxShadow: 'var(--fd404-card-shadow)',
   };
 
-  // NEW: only show the coachmark on desktop widths (hide on mobile where search is in the drawer)
-  const [showCoach, setShowCoach] = useState(true);
+  // UPDATED: only show coachmark on desktop (avoid SSR/mobile flash)
+  const [showCoach, setShowCoach] = useState(false);
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const mq = window.matchMedia('(min-width: 997px)');
     const update = () => setShowCoach(mq.matches);
     update();
-    // Support older browsers
     if (mq.addEventListener) mq.addEventListener('change', update);
     else mq.addListener(update);
     return () => {
@@ -50,14 +90,14 @@ export default function NotFoundContent({className}: Props): ReactNode {
     };
   }, []);
 
-  // NEW: button polish (keeps Docusaurus styles, adds glassy accents)
+  // UPDATED: button polish via CSS vars (no theme flicker)
   const primaryBtnStyle: React.CSSProperties = {
     width: '100%',
     borderRadius: 9999,
     paddingBlock: '0.9rem',
     paddingInline: '1.1rem',
-    boxShadow: isDark ? '0 6px 18px rgba(0,0,0,0.45)' : '0 6px 18px rgba(0,0,0,0.22)',
-    border: `1px solid ${isDark ? 'rgba(255,255,255,0.14)' : 'rgba(0,0,0,0.08)'}`,
+    boxShadow: 'var(--fd404-primary-shadow)',
+    border: '1px solid var(--fd404-primary-border)',
     transition: 'transform 150ms ease, box-shadow 150ms ease',
   };
   const secondaryBtnStyle: React.CSSProperties = {
@@ -65,18 +105,17 @@ export default function NotFoundContent({className}: Props): ReactNode {
     borderRadius: 9999,
     paddingBlock: '0.9rem',
     paddingInline: '1.1rem',
-    // NEW: ensure readable text in both themes
-    color: isDark ? 'rgba(255,255,255,0.95)' : 'rgba(0,0,0,0.85)',
-    backgroundColor: isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.04)',
-    border: `1px solid ${isDark ? 'rgba(255,255,255,0.14)' : 'rgba(0,0,0,0.08)'}`,
-    boxShadow: isDark ? '0 6px 16px rgba(0,0,0,0.35)' : '0 6px 16px rgba(0,0,0,0.1)',
+    color: 'var(--fd404-secondary-text)',
+    backgroundColor: 'var(--fd404-secondary-bg)',
+    border: '1px solid var(--fd404-secondary-border)',
+    boxShadow: 'var(--fd404-secondary-shadow)',
     transition: 'transform 150ms ease, box-shadow 150ms ease, color 150ms ease',
   };
 
-  // NEW: coachmark styles pointing to the top-right search
-  const coachBg = isDark ? 'rgba(20,20,20,0.9)' : 'rgba(255,255,255,0.98)';
-  const coachBorder = isDark ? 'rgba(255,255,255,0.16)' : 'rgba(0,0,0,0.12)';
-  const coachText = isDark ? '#fff' : '#111';
+  // UPDATED: coachmark colors via CSS vars
+  const coachBg = 'var(--fd404-coach-bg)';
+  const coachBorder = 'var(--fd404-coach-border)';
+  const coachText = 'var(--fd404-coach-text)';
 
   return (
     // Wrapper: controls page height so the background ends at the fold
@@ -88,15 +127,17 @@ export default function NotFoundContent({className}: Props): ReactNode {
         overflowX: 'hidden', // prevent tiny horizontal scrollbars on very small screens
       }}
     >
+      {/* Inject theme CSS to prevent initial light/dark blend */}
+      <style dangerouslySetInnerHTML={{__html: themeCss}} />
+
       {/* LIGHT gradient layer (behind everything) */}
       <div
         aria-hidden="true"
+        className="fd404-layer--light fd404-fade"
         style={{
           position: 'absolute',
           inset: 0,
           backgroundImage: lightGradient,
-          opacity: isDark ? 0 : 1,
-          transition: 'opacity 250ms ease',
           pointerEvents: 'none',
           zIndex: 0,
         }}
@@ -104,6 +145,7 @@ export default function NotFoundContent({className}: Props): ReactNode {
       {/* LIGHT clouds (repeating) */}
       <div
         aria-hidden="true"
+        className="fd404-layer--light fd404-fade"
         style={{
           position: 'absolute',
           inset: 0,
@@ -111,8 +153,6 @@ export default function NotFoundContent({className}: Props): ReactNode {
           backgroundRepeat: 'repeat',
           backgroundSize: `${skyTile} ${skyTile}`,
           backgroundPosition: 'center top',
-          opacity: isDark ? 0 : 1,
-          transition: 'opacity 250ms ease',
           pointerEvents: 'none',
           zIndex: 1,
         }}
@@ -120,6 +160,7 @@ export default function NotFoundContent({className}: Props): ReactNode {
       {/* DARK stars (repeating) */}
       <div
         aria-hidden="true"
+        className="fd404-layer--dark fd404-fade"
         style={{
           position: 'absolute',
           inset: 0,
@@ -127,8 +168,6 @@ export default function NotFoundContent({className}: Props): ReactNode {
           backgroundRepeat: 'repeat',
           backgroundSize: `${skyTile} ${skyTile}`,
           backgroundPosition: 'center top',
-          opacity: isDark ? 1 : 0,
-          transition: 'opacity 250ms ease',
           pointerEvents: 'none',
           zIndex: 1,
         }}
@@ -137,6 +176,7 @@ export default function NotFoundContent({className}: Props): ReactNode {
       {/* crossfading desert layers (raise z-index above sky) */}
       <div
         aria-hidden="true"
+        className="fd404-layer--light fd404-fade"
         style={{
           position: 'absolute',
           inset: 0,
@@ -145,13 +185,12 @@ export default function NotFoundContent({className}: Props): ReactNode {
           backgroundSize: '100% auto',
           backgroundPosition: 'center bottom',
           pointerEvents: 'none',
-          opacity: isDark ? 0 : 1,
-          transition: 'opacity 250ms ease',
           zIndex: 2,
         }}
       />
       <div
         aria-hidden="true"
+        className="fd404-layer--dark fd404-fade"
         style={{
           position: 'absolute',
           inset: 0,
@@ -160,8 +199,6 @@ export default function NotFoundContent({className}: Props): ReactNode {
           backgroundSize: '100% auto',
           backgroundPosition: 'center bottom',
           pointerEvents: 'none',
-          opacity: isDark ? 1 : 0,
-          transition: 'opacity 250ms ease',
           zIndex: 2,
         }}
       />
@@ -172,7 +209,6 @@ export default function NotFoundContent({className}: Props): ReactNode {
         style={{
           position: 'relative',
           zIndex: 3,
-          // CHANGED: keep horizontal centering while removing vertical margins
           marginInline: 'auto',
           marginBlock: 0,
           height: '100%',
@@ -279,7 +315,7 @@ export default function NotFoundContent({className}: Props): ReactNode {
               borderRadius: 9999,
               padding: '10px 14px',
               fontSize: '0.95rem',
-              boxShadow: isDark ? '0 10px 24px rgba(0,0,0,0.45)' : '0 10px 24px rgba(0,0,0,0.15)',
+              boxShadow: '0 10px 24px rgba(0,0,0,0.25)',
               backdropFilter: 'saturate(140%) blur(6px)',
               WebkitBackdropFilter: 'saturate(140%) blur(6px)',
             }}
@@ -297,7 +333,7 @@ export default function NotFoundContent({className}: Props): ReactNode {
                 borderTop: `1px solid ${coachBorder}`,
                 borderLeft: `1px solid ${coachBorder}`,
                 transform: 'rotate(45deg)',
-                boxShadow: isDark ? '0 -2px 6px rgba(0,0,0,0.35)' : '0 -2px 6px rgba(0,0,0,0.1)',
+                boxShadow: '0 -2px 6px rgba(0,0,0,0.2)',
               }}
             />
           </div>

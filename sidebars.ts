@@ -32,6 +32,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Additional Resources',
       items: [
+        'toe-clip-codes',
         'glossary',
         'feedback',
       ],

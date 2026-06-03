@@ -1,0 +1,92 @@
+---
+id: toe-clip-codes
+title: Toe-clip Codes
+sidebar_position: 6
+---
+
+import ToeClipCodeExample from '@site/static/img/toe-clip-code-example.svg';
+
+## Overview
+
+Toe-clip codes are field marks used to identify individual lizards during capture mark-recapture work. A toe-clip code records which toes are already missing or intentionally clipped, so the same individual can be recognized if it is captured again.
+
+The goal is to create a clear individual identifier while minimizing harm to the animal. Toe clipping should always follow the approved field protocol for the project, and unusual cases should be documented in the comments for the capture record.
+
+## How to Read a Toe-clip Code
+
+A toe-clip code is written as a set of letter-number pairs.
+
+- The letter identifies the foot.
+- The number identifies the toe on that foot.
+- Each pair identifies one missing or clipped toe.
+
+For example, `A1-B2-C3` means toe 1 on foot A, toe 2 on foot B, and toe 3 on foot C are part of the animal's identifying pattern.
+
+<ToeClipCodeExample
+  className="toeClipCodeExample"
+  role="img"
+  aria-label="Toe-clip code foot and toe reference"
+/>
+
+For consistency, toe-clip codes should be recorded in a predictable order: feet from A to D, and toes in ascending order when more than one toe is recorded on the same foot. For example, record `A1-A2`, not `A2-A1`.
+
+## Uniqueness
+
+Within Field Day, a toe-clip code identifies an individual within the same project, site, and species. A code should not be reused for a different animal of the same species at the same site, even if the animal is found in a different array.
+
+Arrays are not treated as separate uniqueness boundaries because arrays within a site are close enough that animals could reasonably move between them. Projects and sites are spaced far enough apart that the same animal is not expected to be found between them.
+
+## Standard Suggested Codes
+
+The standard suggested toe-clip patterns are conservative. They are intended for routine new captures and follow two main expectations:
+
+- Use no more than one toe per foot when possible.
+- Avoid toe positions that may have a larger effect on locomotion or survival.
+
+The app can suggest unused codes for new captures, but suggested codes are not a substitute for field judgment or project protocol.
+
+## Why C4 and D4 Are Not Suggested
+
+The Field Day app does not suggest codes containing C4 or D4.
+
+Those toes are avoided because clipping them may interfere with normal movement, grip, and locomotion. Any change that affects how an animal moves can also affect its ability to escape predators, find shelter, forage, or survive after release.
+
+Avoiding C4 and D4 in routine suggestions helps reduce animal welfare risk while still leaving many other identifying patterns available.
+
+:::caution
+Do not treat C4 or D4 as routine choices. If a protocol or field supervisor allows an exception, document the reason clearly in the capture comments.
+:::
+
+## Natural Toe Loss and Overrides
+
+Not every missing toe is caused by marking. A lizard may already be missing one or more toes because of natural injury, predation attempts, shedding complications, or earlier field history.
+
+Natural toe loss can be useful because it may identify the animal without requiring additional clipping. For example, if an animal is naturally missing two toes on the same foot, that pattern may already be distinctive enough for identification.
+
+Because multiple missing toes on one foot are unusual for standard marking, the app does not suggest these patterns automatically. They can be entered manually when the field situation justifies it.
+
+When using a manual override:
+
+- Confirm that the pattern reflects the animal in hand.
+- Avoid recording the same toe twice.
+- Keep toes on the same foot in ascending order, such as `A1-A2`.
+- Add a comment explaining that the pattern reflects natural toe loss or another unusual circumstance.
+
+:::tip
+A manual override should reduce unnecessary clipping, not create a more aggressive marking pattern.
+:::
+
+## New Captures and Recaptures
+
+For a new capture, choose or enter a toe-clip code that is not already assigned to another animal of the same species at the same site.
+
+For a recapture, the toe-clip code should match a previously recorded individual. If the code is not found in the existing records for that site and species, double-check the species, site, recapture status, and toe pattern before proceeding.
+
+## Good Field Practice
+
+- Check the toe pattern carefully before entering the code.
+- Verify the species and site before assigning a new code.
+- Use suggested codes for normal new captures.
+- Use manual entry only for unusual patterns, especially natural toe loss.
+- Record comments for any unusual pattern, uncertainty, or protocol exception.
+- Review the confirmation screen before submitting the capture record.

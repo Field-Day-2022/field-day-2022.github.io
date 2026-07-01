@@ -23,7 +23,7 @@ The Field Day project is a Wildlife Data Collection and management tool designed
 
 ### Initial Setup and Login
 
-1. Access the PWA at [https://asu-field-day-pwa.web.app/](https://asu-field-day-pwa.web.app/) on your mobile device.
+1. Open the Field Day PWA link provided by the project sponsor on your mobile device.
 2. Enter your handler initials (2-3 characters required).
 3. Select your project, site, and array from the dropdown menus.
 

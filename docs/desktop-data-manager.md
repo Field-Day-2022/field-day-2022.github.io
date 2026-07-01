@@ -16,7 +16,7 @@ Please reach out to Dr. Bateman for this password to access the site.
 
 ### Logging In
 
-The Desktop Field Day app is located at: [Field Day Desktop](https://asu-field-day-webui.web.app/login)
+Contact Dr. Bateman for the current desktop app access information.
 
 Sign in to this portal with your ASU-affiliated Google account.
 
